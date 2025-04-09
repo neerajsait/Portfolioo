@@ -1,0 +1,199 @@
+body {
+    margin: 0; /* Remove default margin for full-page coverage */
+    padding: 0;
+    background-color: #000; /* Fallback if particles fail */
+    position: relative; /* Allows z-index stacking */
+}
+
+.certifications-section {
+    width: 90%;
+    max-width: 1200px; /* Slightly wider to match Projects */
+    margin: 90px auto; /* Increased top margin to account for fixed navbar (60px height + 30px buffer) */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent for readability over particles */
+    padding: 60px 0; /* Added padding for section depth */
+    position: relative;
+    z-index: 1; /* Above particles */
+    overflow: hidden;
+}
+
+/* Subtle overlay effect like Projects */
+.certifications-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(174, 224, 100, 0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.certifications-section h2 {
+    font-size: 2.8rem; /* Larger like Projects h2 */
+    color: #f0ecec; /* Light color for contrast on dark background */
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.certifications-section h2 span {
+    color: #aee064; /* Matches your theme */
+}
+
+.certifications-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #aee064, transparent);
+    border-radius: 2px;
+}
+
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Larger min width for bigger cards */
+    gap: 40px; /* Increased gap like Projects */
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.certification {
+    background: linear-gradient(145deg, #1a1a1a, #131313); /* Gradient like Projects cards */
+    padding: 40px; /* Increased padding for larger boxes */
+    border-radius: 15px; /* More rounded like Projects */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    text-align: center;
+    border: 1px solid rgba(174, 224, 100, 0.2); /* Subtle border like Projects */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect like Projects */
+.certification:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(174, 224, 100, 0.3);
+    border-color: #aee064;
+}
+
+/* Shine effect like Projects */
+.certification::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(174, 224, 100, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.certification:hover::before {
+    left: 100%;
+}
+
+.certification img {
+    width: 120px; /* Larger image to match bigger card */
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.certification:hover img {
+    transform: scale(1.1);
+}
+
+.certification h3 {
+    font-size: 1.6rem; /* Larger like Projects card-title */
+    color: #f0ecec; /* Light color for contrast */
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.certification p {
+    font-size: 1.1rem; /* Slightly larger for readability */
+    color: #ddd; /* Lighter gray for dark theme */
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .certifications-section {
+        margin: 70px auto; /* Adjusted for smaller navbar height */
+        padding: 40px 0;
+    }
+
+    .certifications-section h2 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    .certifications-section h2::after {
+        width: 60px;
+    }
+
+    .certifications-container {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Slightly smaller min width */
+        gap: 30px;
+    }
+
+    .certification {
+        padding: 30px;
+    }
+
+    .certification img {
+        width: 100px;
+    }
+
+    .certification h3 {
+        font-size: 1.4rem;
+    }
+
+    .certification p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certifications-section {
+        margin: 60px auto; /* Adjusted for smallest navbar */
+        padding: 30px 0;
+    }
+
+    .certifications-section h2 {
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+    }
+
+    .certifications-section h2::after {
+        width: 50px;
+    }
+
+    .certification {
+        padding: 25px;
+    }
+
+    .certification img {
+        width: 90px;
+    }
+
+    .certification h3 {
+        font-size: 1.3rem;
+    }
+
+    .certification p {
+        font-size: 0.9rem;
+    }
+}

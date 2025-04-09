@@ -1,0 +1,92 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px 30px;
+    width: 100%;
+    position: fixed; /* Keeps navbar sticky at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures navbar stays above other content */
+    box-sizing: border-box; /* Prevents padding from increasing width */
+}
+
+.navbar-left .nav-h {
+    font-size: 30px;
+    color: white;
+    margin: 0;
+}
+
+.navbar-right {
+    font-size: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-right .a-ele {
+    color: white; /* Ensures links are visible on black background */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s; /* Optional: Smooth hover effect */
+}
+
+.navbar-right .a-ele:hover {
+    color:  #aee064;; /* Optional: Hover color */
+}
+
+.hamburger {
+    display: none; /* Hidden by default on larger screens */
+    color: white; /* Matches navbar text */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media Query for Tablets and Below */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+        flex-wrap: wrap; /* Allows wrapping if needed */
+    }
+
+    .navbar-left .nav-h {
+        font-size: 18px;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on smaller screens */
+    }
+
+    .navbar-right {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+        background-color: black; /* Matches navbar background */
+        padding: 10px 0; /* Adds padding to menu */
+        position: absolute;
+        top: 100%; /* Positions below navbar */
+        left: 0;
+    }
+
+    .navbar-right.active {
+        display: flex; /* Show when active (toggled by JS) */
+    }
+
+    .navbar-right .a-ele {
+        font-size: 16px;
+        padding: 8px 0;
+        display: block;
+    }
+}
+
+/* Media Query for Smaller Phones */
+@media (max-width: 480px) {
+    .navbar-left .nav-h {
+        font-size: 16px;
+    }
+
+    .navbar-right .a-ele {
+        font-size: 14px;
+    }
+}

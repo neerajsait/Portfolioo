@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Portfolio</title>
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+</div>
+<!-- Particles.js Background -->
+<div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+
+    <div class="navbar">
+        <div class="navbar-left">
+            <h3 class="nav-h">Tiruveedhi Neeraj Venkata Sai</h3>
+        </div>
+        <div class="navbar-right">
+            <a class="a-ele" href="index.html" style="--i:1">Home</a>
+            <a class="a-ele" href="about.html" style="--i:6">About</a>
+            <a class="a-ele" href="skills.html" style="--i:3">Skills</a>
+            <a class="a-ele" href="projects.html" style="--i:4">Projects</a>    
+            <a class="a-ele" href="certifications.html" style="--i:4">Certifications</a> 
+            <a class="a-ele" href="contact.html" style="--i:5">Contact</a>
+        </div>
+    </div>
+
+    <section id="Projects">
+        <h2 class="subtitle">My <span>Projects</span></h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3 class="card-title">Online Bus Reservation</h3>
+                <p class="card-text">A team project where we developed an effective online bus booking platform using the MERN stack, offering a seamless and trouble-free booking experience with a user-friendly interface, secure transactions, and real-time availability. <strong>My Contribution:</strong> I contributed to improving the frontend experience, ensuring smooth user navigation, and integrating APIs for real-time data management, enhancing my skills in full-stack development and problem-solving.</p>
+                <p class="card-text"><strong>Technologies:</strong> MongoDB, Express.js, React, Node.js</p>
+                <a href="https://mswd-seven.vercel.app/" target="_blank" class="btn">Live Demo</a>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Hotel Management</h3>
+                <p class="card-text">A collaborative team project to build a Hotel Management System using Python Django and PostgreSQL, providing a robust solution for booking rooms and managing services. <strong>My Contribution:</strong> I focused on designing and implementing the user interface, ensuring it was easy to use and provided a smooth booking experience for clients, while collaborating with the team using Git for version control.</p>
+                <p class="card-text"><strong>Technologies:</strong> Python, Django, PostgreSQL, Git</p>
+                <!-- No link provided, so no button added. Add one if you have a repo or demo -->
+            </div>
+            <div class="card">
+                <h3 class="card-title">Campus Recruitment System</h3>
+                <p class="card-text">A team effort to create a platform streamlining campus hiring processes, built with Spring Boot and MySQL, including features for job postings, application management, and interview scheduling. <strong>My Contribution:</strong> I worked on developing recruiter-side functionalities such as job advertisements, application handling, and interview setup, ensuring efficiency, security, and an intuitive user interface.</p>
+                <p class="card-text"><strong>Technologies:</strong> Java, Spring Boot, MySQL</p>
+                <!-- No link provided, so no button added. Add one if you have a repo or demo -->
+            </div>
+            <div class="card">
+                <h3 class="card-title">Secure Data Management Web App</h3>
+                <p class="card-text">A team project to develop a Flask-based web application for securely managing user data with encryption, OTP authentication, and activity tracking, featuring encrypted CRUD operations, email notifications, and session management. <strong>My Contribution:</strong> I designed and implemented the encryption/decryption logic using Fernet, integrated Flask-Mail for OTP and notification emails, and developed secure session management with token-based termination, enhancing the app’s security and user experience.</p>
+                <p class="card-text"><strong>Technologies:</strong> Flask, SQLAlchemy, MySQL, Fernet, Flask-Mail, Flask-Limiter</p>
+                <a href="https://github.com/neerajsait/secure-data-app" target="_blank" class="btn">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <a href="#" class="top" style='font-size: 40px;'><i class='bx bx-rocket'></i></a>
+        <p>Developed by Neeraj | © 2025</p>
+    </div>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 60,
+                    "density": { "enable": true, "value_area": 800 }
+                },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3 },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": { "enable": true, "speed": 2 }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": { "opacity": 1 }
+                    },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+        </script>
+        
+</body>
+</html>

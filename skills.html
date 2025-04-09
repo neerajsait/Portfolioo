@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - My Portfolio</title>
+    <link rel="stylesheet" href="css\skills.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <h3 class="nav-h">Tiruveedhi Neeraj Venkata Sai</h3>
+        </div>
+        <div class="navbar-right">
+            <a class="a-ele" href="index.html" style="--i:1">Home</a>
+            <a class="a-ele" href="about.html" style="--i:6">About</a>
+            <a class="a-ele" href="skills.html" style="--i:3">Skills</a>
+            <a class="a-ele" href="projects.html" style="--i:4">Projects</a>    
+            <a class="a-ele" href="certifications.html" style="--i:4">Certifications</a> 
+            <a class="a-ele" href="contact.html" style="--i:5">Contact</a>
+        </div>
+    </div>
+
+     <!-- Particles.js Background -->
+     <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+    <section id="skills" class="skills-section">
+
+        <h2 class="subtitle">My <span>Skills</span></h2>
+        <div class="skills-container">
+            <!-- Frontend -->
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Frontend</h3>
+                <div class="skills-list">
+                    <span><i class="fab fa-html5"></i> HTML</span>
+                    <span><i class="fab fa-css3-alt"></i> CSS</span>
+                    <span><i class="fab fa-js"></i> JavaScript</span>
+                    <span><i class="fab fa-react"></i> React.js</span>
+                    <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-category">
+                <h3><i class="fas fa-server"></i> Backend</h3>
+                <div class="skills-list">
+                    <span><i class="fab fa-python"></i> Python</span>
+                    <span><i class="fab fa-java"></i> Java</span>
+                    <span><i class="fas fa-leaf"></i> Spring Boot</span>
+                    <span><i class="fas fa-flask"></i> Flask</span>
+                </div>
+            </div>
+
+            <!-- Database -->
+            <div class="skill-category">
+                <h3><i class="fas fa-database"></i> Database & IDEs</h3>
+                <div class="skills-list">
+                    <span><i class="fas fa-database"></i> MySQL</span>
+                    <span><i class="fas fa-code"></i> VS Code</span>
+                    <span><i class="fas fa-code"></i> Eclipse</span>
+                    <span><i class="fas fa-code"></i> PyCharm</span>
+                    <span><i class="fas fa-database"></i> MongoDB</span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Tools</h3>
+                <div class="skills-list">
+                    <span><i class="fab fa-github"></i> GitHub</span>
+                    <span><i class="fab fa-figma"></i> Figma</span>
+                    <span><i class="fas fa-flask"></i> Postman</span>
+                    <span><i class="fas fa-chart-pie"></i> Tableau</span>
+                    <span><i class="fas fa-database"></i> Pandas & NumPy</span>
+                    <span><i class="fas fa-chart-bar"></i> Matplotlib & Seaborn</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="footer">
+        <a href="#" class="top" style='font-size: 40px; padding-right:4000px'><i class='bx bx-rocket'></i></a>
+        <p>Developed by Neeraj | &copy; 2025</p>
+    </div>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 60,
+                    "density": { "enable": true, "value_area": 800 }
+                },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3 },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": { "enable": true, "speed": 2 }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": { "opacity": 1 }
+                    },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+
+/* GLOBAL STYLES */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+    font-family: 'Electrolize', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* COMMON COMPONENTS */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #aee064;
+    border-radius: 40px;
+    font-size: 15px;
+    color: #081b29;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 5px #aee064, 
+                0 0 25px rgb(70, 172, 80), 
+                0 0 50px #aee064, 
+                0 0 200px #aee064;
+}
+
+
+
+
+
+
+
+.subtitle span {
+    color: #aee064; /* Retained from original */
+}
+/* GLOBAL RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+    body { font-size: 1rem; }
+    .container { width: 95%; }
+}
+
+@media (max-width: 768px) {
+    body { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+    body { font-size: 0.9rem; }
+}
+/* Footer */
+.footer {
+    background: #111;
+    padding: 20px 0;
+    text-align: center;
+    color: #f8f8f8;
+}
+
+.footer .top {
+    font-size: 40px;
+    color: #aee064;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer .top:hover {
+    color: #00ff99;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #aee064;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #ddd;
+}

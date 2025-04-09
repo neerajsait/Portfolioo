@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Tiruveedhi Neeraj Venkata Sai, an engineering student passionate about programming, cybersecurity, and web development.">
+    <meta name="keywords" content="Neeraj, portfolio, engineering, programming, cybersecurity, web development">
+    <title>MY Portfolio</title>
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-GA-ID');
+    </script>
+</head>
+
+<body>
+    <!-- Particles.js Background -->
+    <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <h3 class="nav-h">Tiruveedhi Neeraj Venkata Sai</h3>
+        </div>
+        <div class="navbar-right">
+            <a class="a-ele" href="index.html" style="--i:1">Home</a>
+            <a class="a-ele" href="about.html" style="--i:6">About</a>
+            <a class="a-ele" href="skills.html" style="--i:3">Skills</a>
+            <a class="a-ele" href="projects.html" style="--i:4">Projects</a>    
+            <a class="a-ele" href="certifications.html" style="--i:4">Certifications</a> 
+            <a class="a-ele" href="contact.html" style="--i:5">Contact</a>
+        </div>
+       
+    </div>
+
+    <!-- Home Section -->
+<section id="home">
+    <div class="home">
+        <div class="home-container">
+            <div class="home-left">
+                <img src="media/1.jpg" class="responsive" alt="Profile picture of Neeraj Venkata Sai">
+            </div>
+            <div class="home-right">
+                <div class="home-content">
+                    <h2>Hello, It's Me</h2>  
+                    <h1>Neeraj</h1>
+                    <h4 style="--i:6">I'm an Engineering student who is<br>
+                        passionate about <span class="text"></span></h4>
+                     <div class="home-buttons"> <!-- New wrapper for buttons -->
+                    <div class="home-sci">
+                        <a href="https://www.linkedin.com/in/neerajsait" style="--i:7" target="_blank">
+                            <i class="bx bxl-linkedin"></i>
+                        </a>
+                       
+                        <a href="https://github.com/neerajsait" style="--i:9" target="_blank">
+                            <i class="bx bxl-github"></i>
+                        </a>
+                    </div>
+                    <a href="mailto:2200030957@kluniversity.in" class="btn btn-alt">Hire Me</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+    
+   <!-- Hobbies Section -->
+<section id="hobbies">
+    <h2>Hobbies & Interests</h2>
+    <div class="hobbies-container">
+        <div class="hobby-item">
+            <i class="bx bx-lock-alt"></i>
+            <h3>Solving CTF Challenges</h3>
+            <p>I love diving into Capture The Flag challenges to sharpen my cybersecurity skills and solve complex puzzles.</p>
+        </div>
+        <div class="hobby-item">
+            <i class="bx bx-book"></i>
+            <h3>Reading Sci-Fi</h3>
+            <p>Exploring futuristic worlds through science fiction novels fuels my imagination and curiosity.</p>
+        </div>
+        <div class="hobby-item">
+            <i class="bx bx-code-alt"></i>
+            <h3>Tech Trends</h3>
+            <p>Keeping up with the latest in technology keeps me inspired and ahead of the curve.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="#home" class="top" aria-label="Back to top" style='font-size: 40px;'><i class='bx bx-rocket'></i></a>
+        <p>Developed by Neeraj</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Typed.js
+        var typed = new Typed(".text", {
+            strings: ["Programming", "Cybersecurity", "Web Developer"],
+            typeSpeed: 80,
+            backSpeed: 60,
+            backDelay: 1200,
+            loop: true
+        });
+
+        // Scroll to Top
+        const toTop = document.querySelector(".top");
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        toTop.addEventListener("click", scrollToTop);
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        });
+
+       
+
+        
+
+        // Particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3 },
+                "move": { "speed": 2 }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

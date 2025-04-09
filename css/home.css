@@ -1,0 +1,185 @@
+body {
+    margin: 0; /* Remove default margin for full-page coverage */
+    padding: 0;
+    background-color: #000; /* Fallback if particles fail */
+    position: relative; /* Allows z-index stacking */
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent for readability over particles */
+    color: white;
+    padding: 70px 10%;
+    min-height: 100vh;
+    gap: 50px;
+    flex-wrap: wrap;
+    position: relative; /* Ensures content stays above particles */
+    z-index: 1; /* Above particles */
+}
+
+.home-left {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.home-text {
+    text-align: left;
+}
+
+.home-buttons {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    gap: 15px; /* Added for button spacing */
+    justify-content: center; /* Center buttons */
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.home-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    border-radius: 10px; /* Optional: Matches other sections */
+}
+
+.home-left h2 { 
+    font-size: 24px; 
+}
+.home-left h1 { 
+    font-size: 30px; 
+    font-weight: bold; 
+    margin-top: 10px; 
+}
+.home-left h4 { 
+    font-size: 20px; 
+    margin-top: 20px; 
+}
+
+.home-sci {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Added spacing */
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #aee064;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #aee064;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+.home-sci a:hover {
+    background-color: #aee064;
+    color: #000;
+    box-shadow: 0 0 20px #aee064;
+}
+
+@media (min-width: 1024px) {
+    .home {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .home-left, .home-right {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .home-left {
+        width: 100%;
+        text-align: center;
+    }
+    .home-right {
+        width: 100%;
+        justify-content: center;
+    }
+    .home-buttons {
+        text-align: center;
+    }
+    .home-sci {
+        justify-content: center;
+    }
+    .btn {
+        display: inline-block; /* Changed to inline-block for side-by-side on larger screens */
+        margin: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        padding: 50px 5%;
+    }
+    .home-left {
+        width: 100%;
+        text-align: center;
+    }
+    .home-right {
+        width: 100%;
+        justify-content: center;
+    }
+    .home-right img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .home-buttons {
+        text-align: center;
+        flex-direction: column; /* Stack buttons on smaller screens */
+    }
+    .home-sci {
+        justify-content: center;
+    }
+    .btn {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        padding: 30px 5%;
+    }
+    .home-left h1 {
+        font-size: 20px;
+    }
+    .home-left h2, .home-left h4 {
+        font-size: 16px;
+    }
+    .home-right img {
+        width: 90%;
+    }
+    .btn {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+}

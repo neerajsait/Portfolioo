@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - My Portfolio</title>
+    <link rel="stylesheet" href="css/certifications.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="navbar-left">
+            <h3 class="nav-h">Tiruveedhi Neeraj Venkata Sai</h3>
+        </div>
+        <div class="navbar-right">
+            <a class="a-ele" href="index.html" style="--i:1">Home</a>
+            <a class="a-ele" href="about.html" style="--i:6">About</a>
+            <a class="a-ele" href="skills.html" style="--i:3">Skills</a>
+            <a class="a-ele" href="projects.html" style="--i:4">Projects</a>    
+            <a class="a-ele" href="certifications.html" style="--i:4">Certifications</a> 
+            <a class="a-ele" href="contact.html" style="--i:5">Contact</a>
+        </div>
+    </div>
+    <!-- Particles.js Background -->
+    <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+
+    <section id="certifications" class="certifications-section">
+        <h2 class="subtitle">My <span>Certifications</span></h2>
+        <div class="certifications-container">
+            <!-- Postman API -->
+            <div class="certification" onclick="window.open('https://badgr.com/public/assertions/n6jEBEhGRbqsh5MiCcuEjQ')" style="cursor: pointer;">
+                <img src="media/postman.jpg" alt="Postman API Certification">
+                <h3>Postman API Fundamentals</h3>
+                <p>Issued by Postman</p>
+            </div>
+
+            <!-- Salesforce AI Associate -->
+            <div class="certification" onclick="window.open('https://trailhead.salesforce.com/en/credentials/verification/')" style="cursor: pointer;">
+                <img src="media/salesforce.jpg" alt="Salesforce AI Associate">
+                <h3>Salesforce AI Associate</h3>
+                <p>Issued by Salesforce</p>
+            </div>
+
+            <!-- Microsoft AI-900 -->
+            <div class="certification"  onclick="window.open('https://learn.microsoft.com/en-in/users/tiruveedhineerajvenkatasai-1148/credentials/7f6ad6c42a923f73?ref=https%3A%2F%2Fwww.linkedin.com%2F')" style="cursor: pointer;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft AI-900">
+                <h3>AI-900: Azure AI Fundamentals</h3>
+                <p>Issued by Microsoft</p>
+            </div>
+
+            <!-- AWS Certified Cloud Practitioner -->
+            <div class="certification" onclick="https://www.credly.com/badges/4b61af02-e6d6-409b-a4e3-fc3f95f401c4/public_url" style="cursor: pointer;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Certified Cloud Practitioner">
+                <h3>AWS Certified Cloud Practitioner</h3>
+                <p>Issued by Amazon AWS</p>
+            </div>
+
+            <!-- NPTEL Java Programming -->
+            <div class="certification">
+                <img src="media/nptel.jpg" alt="NPTEL Java Certification">
+                <h3>NPTEL Java Programming</h3>
+                <p>Issued by NPTEL (IIT)</p>
+            </div>
+
+            <!-- Linguaskills (B1 in English) -->
+            <div class="certification">
+                <img src="media/Cambridge_Logo.jpeg" alt="Linguaskills English Certification">
+                <h3>Linguaskills (B1 in English)</h3>
+                <p>Issued by Cambridge English</p>
+            </div>
+
+            <!-- Juniper Junos Certification -->
+            <div class="certification">
+                <img src="media/juniper.png" alt="Juniper Junos Certification">
+                <h3>Juniper Networks Certified Associate - Junos (JNCIA-Junos)</h3>
+                <p>Issued by Juniper Networks</p>
+            </div>
+
+            <!-- Cisco Data Analyst Certification -->
+            <div class="certification" onclick="window.open('https:https://www.credly.com/badges/5bd6f98f-f1cf-4e3f-8c59-c330e0fb5c19/public_url')" style="cursor: pointer;"> 
+                <img src="media/cisco.png" alt="Cisco Data Analyst Certification">
+                <h3>Cisco Certified Data Analyst</h3>
+                <p>Issued by Cisco</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <a href="#" class="top" style='font-size: 40px; padding-right:4000px'><i class='bx bx-rocket'></i></a>
+        <p>Developed by Neeraj | &copy; 2025</p>
+    </div>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 60,
+                    "density": { "enable": true, "value_area": 800 }
+                },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3 },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": { "enable": true, "speed": 2 }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": { "opacity": 1 }
+                    },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+        </script>
+        
+</body>
+</html>

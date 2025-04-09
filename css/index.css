@@ -1,0 +1,177 @@
+/* === HOME SECTION STYLES === */
+.home {
+    padding: 20px;
+}
+
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.home-left img.responsive {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.home-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.home-content h2 {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.home-content h4 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.home-sci {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.home-sci a {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.home-sci a:hover {
+    color: #007bff;
+}
+
+/* Responsive Design for HOME */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-buttons {
+        justify-content: center;
+    }
+}
+
+/* === HOBBIES SECTION STYLES === */
+#hobbies {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#hobbies h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+}
+
+#hobbies h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hobbies-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hobby-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hobby-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hobby-item i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.hobby-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.hobby-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive Design for HOBBIES */
+@media (max-width: 768px) {
+    .hobbies-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hobby-item {
+        width: 100%;
+        max-width: 350px;
+    }
+}

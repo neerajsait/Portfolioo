@@ -1,0 +1,265 @@
+body {
+    margin: 0; /* Remove default margin for full-page coverage */
+    padding: 0;
+    background-color: #000; /* Fallback if particles fail */
+    position: relative; /* Allows z-index stacking */
+}
+
+.education {
+    padding: 90px 0; /* Matches .Projects padding */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent for readability over particles */
+    position: relative;
+    z-index: 1; /* Above particles */
+    overflow: hidden;
+    margin: 0; /* Removed margin to align with .Projects */
+}
+
+.education::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(174, 224, 100, 0.1) 0%, transparent 70%); /* Matches .Projects */
+    z-index: 0;
+}
+
+.subtitle {
+    font-size: 2.8rem; /* Matches .Projects h2 */
+    color: #f0ecec; /* Matches .Projects h2 */
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Matches .Projects h2 */
+}
+
+.subtitle span {
+    color: #aee064; /* Retained from original */
+}
+
+.subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; /* Matches .Projects h2::after */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px; /* Matches .Projects h2::after */
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #aee064, transparent); /* Matches .Projects h2::after */
+    border-radius: 2px;
+}
+
+.time-line {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 40px 0;
+    z-index: 1; /* Ensures timeline is above background effect */
+}
+
+.time-line::after {
+    content: '';
+    position: absolute;
+    left: 96.5%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 6px;
+    background: linear-gradient(to bottom, #aee064, #6b9e2f); /* Retained from original */
+    top: 0;
+    bottom: 0;
+    border-radius: 3px;
+    animation: LineAnimated 4s ease-out forwards;
+}
+
+@keyframes LineAnimated {
+    0% { height: 0; }
+    100% { height: 100%; }
+}
+
+.container {
+    width: 50%;
+    position: relative;
+    padding: 20px 10px;
+    margin-bottom: 80px;
+    opacity: 0;
+    animation: Animate-Container 1s ease-out forwards;
+    animation-delay: var(--dly);
+}
+
+@keyframes Animate-Container {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.container:nth-child(odd) {
+    left: 0;
+}
+
+.container:nth-child(even) {
+    left: 94.6%;
+}
+
+.container:nth-child(odd)::before,
+.container:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #aee064;
+    top: 30px;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(174, 224, 100, 0.8); /* Retained glow effect */
+    transition: transform 0.3s ease;
+}
+
+.container:hover::before {
+    transform: scale(1.2); /* Retained hover effect */
+}
+
+.container:nth-child(odd)::before {
+    right: -25px;
+}
+
+.container:nth-child(even)::before {
+    left: -50px;
+}
+
+.text-content {
+    background: #1a1a1a; /* Matches .card background */
+    width: 100%; /* Ensures full width within container */
+    border-radius: 10px; /* Matches .card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Matches .card */
+    padding: 30px; /* Matches .card */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out; /* Matches .card */
+    text-align: left; /* Matches .card */
+    border: 2px solid transparent; /* Matches .card */
+    position: relative;
+    overflow: hidden; /* Matches .card */
+}
+
+.text-content:hover {
+    transform: translateY(-5px); /* Matches .card hover */
+    box-shadow: 0 6px 15px rgba(174, 224, 100, 0.25); /* Matches .card hover */
+    border: 2px solid #aee064; /* Matches .card hover */
+}
+
+.text-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(174, 224, 100, 0.15), transparent); /* Matches .card::before */
+    transition: left 0.4s ease-in-out;
+}
+
+.text-content:hover::before {
+    left: 100%; /* Matches .card:hover::before */
+}
+
+.text-content h2 {
+    font-size: 26px; /* Matches .card-title */
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #f0ecec; /* Matches .card-title */
+    text-transform: uppercase;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Matches .card-title */
+}
+
+.text-content p {
+    font-size: 16px; /* Matches .card-text */
+    color: #ddd; /* Matches .card-text */
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .education {
+        padding: 70px 0; /* Matches .Projects */
+    }
+
+    .subtitle {
+        font-size: 2.2rem; /* Matches .Projects h2 */
+        letter-spacing: 2px;
+    }
+
+    .subtitle::after {
+        width: 60px; /* Matches .Projects h2::after */
+    }
+
+    .time-line {
+        width: 90%;
+        padding: 20px 0;
+    }
+
+    .time-line::after {
+        left: 25px;
+        transform: none;
+    }
+
+    .container {
+        width: 90%; /* Matches .card width */
+        left: 0;
+        margin-bottom: 60px;
+    }
+
+    .container:nth-child(odd),
+    .container:nth-child(even) {
+        left: 0;
+    }
+
+    .container:nth-child(odd)::before,
+    .container:nth-child(even)::before {
+        left: 15px;
+        right: auto;
+    }
+
+    .text-content {
+        padding: 25px; /* Matches .card */
+        margin-left: 50px;
+    }
+
+    .text-content h2 {
+        font-size: 24px; /* Matches .card-title */
+    }
+
+    .text-content p {
+        font-size: 14px; /* Matches .card-text */
+    }
+}
+
+@media (max-width: 480px) {
+    .education {
+        padding: 60px 0; /* Matches .Projects */
+    }
+
+    .subtitle {
+        font-size: 1.8rem; /* Matches .Projects h2 */
+        letter-spacing: 1.5px;
+    }
+
+    .subtitle::after {
+        width: 50px; /* Matches .Projects h2::after */
+    }
+
+    .text-content {
+        padding: 20px; /* Matches .card */
+        margin-left: 45px;
+    }
+
+    .text-content h2 {
+        font-size: 22px; /* Matches .card-title */
+    }
+
+    .text-content p {
+        font-size: 13px; /* Matches .card-text */
+    }
+}
