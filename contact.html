@@ -4,59 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - My Portfolio</title>
-    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
     <!-- Particles.js Background -->
-    <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+    <div id="particles-js"></div>
 
-    <div class="navbar">
+    <header class="navbar">
         <div class="navbar-left">
             <h3 class="nav-h">Tiruveedhi Neeraj Venkata Sai</h3>
         </div>
         <div class="navbar-right">
-            <a class="a-ele" href="index.html" style="--i:1">Home</a>
-            <a class="a-ele" href="about.html" style="--i:6">About</a>
-            <a class="a-ele" href="skills.html" style="--i:3">Skills</a>
-            <a class="a-ele" href="projects.html" style="--i:4">Projects</a>    
-            <a class="a-ele" href="certifications.html" style="--i:4">Certifications</a> 
-            <a class="a-ele" href="contact.html" style="--i:5">Contact</a>
-            
+            <a class="a-ele" href="index.html">Home</a>
+            <a class="a-ele" href="about.html">About</a>
+            <a class="a-ele" href="skills.html">Skills</a>
+            <a class="a-ele" href="projects.html">Projects</a>    
+            <a class="a-ele" href="certifications.html">Certifications</a> 
+            <a class="a-ele" href="contact.html">Contact</a>
         </div>
-    </div>
+    </header>
 
-    <section id="contact">
-        <div class="contact">
-            <div class="contact-info">
-                <h2 class="subtitle">Contact <span>Me</span></h2>
-                <i class="bx bxl-gmail"></i>
-                <p>2200030957@kluniversity.in</p>
-                <p>+91 9642292282</p>
-                <p>Based in: Vijayawada, India</p>
+    <main class="contact-section">
+        <div class="contact-container">
+            <div class="contact-card">
+                <div class="contact-header">
+                    <h2 class="section-title">Get In <span>Touch</span></h2>
+                    <p class="section-subtitle">Let's collaborate on your next project</p>
+                </div>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bx bx-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <a href="mailto:2200030957@kluniversity.in">2200030957@kluniversity.in</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bx bx-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <a href="tel:+919642292282">+91 9642292282</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bx bx-map"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>Vijayawada, India</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/tiruveedhi-neeraj-venkata-sai-936998282/" target="_blank" class="social-icon"><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/neerajsait" target="_blank" class="social-icon"><i class="bx bxl-github"></i></a>
-                    <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://linkedin.com/in/tiruveedhi-neeraj-venkata-sai-936998282/" target="_blank" class="social-icon">
+                        <i class="bx bxl-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/neerajsait" target="_blank" class="social-icon">
+                        <i class="bx bxl-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
+                        <i class="bx bxl-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="media/resume.pdf" class="btn" download>
+                        <i class="bx bx-download"></i> Download CV
+                    </a>
+                    <a href="mailto:2200030957@kluniversity.in" class="btn btn-alt">
+                        <i class="bx bx-paper-plane"></i> Hire Me
+                    </a>
                 </div>
             </div>
-            
-            <div class="btn-container">
-                <a href="media/resume.pdf" class="btn" download>Download CV</a>
-                <a href="mailto:2200030957@kluniversity.in" class="btn btn-alt">Hire Me</a>
-            </div>
-        </div>
-    </section>
 
-    <div class="footer">
-        <a href="#" class="top"><i class='bx bx-rocket'></i></a>
-        <p>Developed by Neeraj | © 2025</p>
-    </div>
+            <!-- <div class="contact-form">
+                <h3>Send Me a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn form-submit">
+                        <i class="bx bx-send"></i> Send Message
+                    </button>
+                </form>
+            </div> -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="#" class="top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+        <p>Developed with ❤️ by Neeraj | &copy; 2025</p>
+    </footer>
 
     <script>
         particlesJS("particles-js", {
@@ -65,23 +134,36 @@
                     "value": 60,
                     "density": { "enable": true, "value_area": 800 }
                 },
-                "color": { "value": "#ffffff" },
+                "color": { "value": "#0ef" },
                 "shape": { "type": "circle" },
                 "opacity": { "value": 0.5 },
                 "size": { "value": 3 },
                 "line_linked": {
                     "enable": true,
                     "distance": 150,
-                    "color": "#ffffff",
+                    "color": "#0ef",
                     "opacity": 0.4,
                     "width": 1
                 },
-                "move": { "enable": true, "speed": 2 }
+                "move": { 
+                    "enable": true, 
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out"
+                }
             },
             "interactivity": {
                 "events": {
-                    "onhover": { "enable": true, "mode": "grab" },
-                    "onclick": { "enable": true, "mode": "push" }
+                    "onhover": { 
+                        "enable": true, 
+                        "mode": "grab" 
+                    },
+                    "onclick": { 
+                        "enable": true, 
+                        "mode": "push" 
+                    }
                 },
                 "modes": {
                     "grab": {
@@ -92,6 +174,30 @@
                 }
             },
             "retina_detect": true
+        });
+
+        // Form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to a server
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Floating label effect
+        document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentNode.classList.add('focused');
+            });
+            input.addEventListener('blur', function() {
+                if (this.value === '') {
+                    this.parentNode.classList.remove('focused');
+                }
+            });
+            // Initialize focused state if there's a value
+            if (input.value !== '') {
+                input.parentNode.classList.add('focused');
+            }
         });
     </script>
 </body>
