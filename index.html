@@ -7,8 +7,7 @@
     <meta name="keywords" content="Neeraj, portfolio, engineering, programming, cybersecurity, web development">
     <title>MY Portfolio</title>
     <link rel="icon" href="media/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/home.css" >
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -41,6 +40,7 @@
             <a class="a-ele" href="projects.html" style="--i:4">Projects</a>    
             <a class="a-ele" href="certifications.html" style="--i:4">Certifications</a> 
             <a class="a-ele" href="contact.html" style="--i:5">Contact</a>
+            <button class="hamburger"><i class="fas fa-bars"></i></button>
         </div>
        
     </div>
@@ -102,10 +102,10 @@
 </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <a href="#" class="top" aria-label="Back to top"><i class='bx bx-rocket'></i></a>
-        <p>Developed with ❤️ by Neeraj | &copy; 2025</p>
-    </footer>
+    <div class="footer">
+        <a href="#home" class="top" aria-label="Back to top" style='font-size: 40px;'><i class='bx bx-rocket'></i></a>
+        <p>Developed by Neeraj</p>
+    </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
@@ -136,7 +136,14 @@
             }
         });
 
-       
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navbarRight = document.querySelector('.navbar-right');
+
+    hamburger.addEventListener('click', () => {
+        navbarRight.classList.toggle('active');
+    });
+});
 
         
 
