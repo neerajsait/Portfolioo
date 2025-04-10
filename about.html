@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - My Portfolio</title>
+    <link rel="stylesheet" href="css\about.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/footer.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <!-- Particles.js Background -->
-    <div id="particles-js"></div>
 
-    <header class="navbar">
+ <!-- Particles.js Background -->
+ <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+
+
+    <div class="navbar">
         <div class="navbar-left">
             <h3 class="nav-h">Tiruveedhi Neeraj Venkata Sai</h3>
         </div>
@@ -27,61 +29,40 @@
             <a class="a-ele" href="projects.html" style="--i:4">Projects</a>    
             <a class="a-ele" href="certifications.html" style="--i:4">Certifications</a> 
             <a class="a-ele" href="contact.html" style="--i:5">Contact</a>
+            <button class="hamburger"><i class="fas fa-bars"></i></button>
         </div>
-    </header>
+    </div>
 
-    <main class="about-container">
-        <section class="about-section">
-            <div class="about-header">
-                <h1 class="about-title">About <span>Me</span></h1>
-                <p class="about-subtitle">My educational journey and passion for technology</p>
-            </div>
-
-            <div class="education-timeline">
-                <h2 class="timeline-title">Education <span>Timeline</span></h2>
-                
-                <div class="timeline">
-                    <div class="timeline-item" style="--dly:0.3s">
-                        <div class="timeline-content">
-                            <div class="timeline-icon">
-                                <i class='bx bxs-graduation'></i>
-                            </div>
-                            <h3 class="timeline-period">2018-2019</h3>
-                            <h2 class="timeline-heading">10th Grade</h2>
-                            <p class="timeline-description">Completed at Bharatiya Vidya Bhavan's Public School (CBSE) in Bhimavaram with 413/500. Actively participated in sports, quizzes, and debates, developing teamwork and leadership skills.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" style="--dly:0.6s">
-                        <div class="timeline-content">
-                            <div class="timeline-icon">
-                                <i class='bx bxs-school'></i>
-                            </div>
-                            <h3 class="timeline-period">2019-2021</h3>
-                            <h2 class="timeline-heading">Intermediate</h2>
-                            <p class="timeline-description">Achieved 908/1000 at Tirumala Junior College. Developed strong problem-solving skills in mathematics and scored 89 percentile in JEE Mains 2022, solidifying my engineering aspirations.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" style="--dly:0.9s">
-                        <div class="timeline-content">
-                            <div class="timeline-icon">
-                                <i class='bx bxs-chip'></i>
-                            </div>
-                            <h3 class="timeline-period">2021-Present</h3>
-                            <h2 class="timeline-heading">Engineering</h2>
-                            <p class="timeline-description">Currently in 3rd year of CSE at Koneru Lakshmai University with 9.22 CGPA. Proficient in C, Java, Python, and full-stack concepts. Serving as peer mentor and LEAD member, enhancing leadership and technical skills.</p>
-                        </div>
+    <section id="about">
+        <div class="education">
+            <h2 class="subtitle">Education <span>Timeline</span></h2>
+            <section class="time-line">
+                <div class="container">
+                    <div class="text-content">
+                        <h2>10th class</h2>
+                        <p>I completed my 10th grade education at Bharatiya Vidya Bhavan's Public School (CBSE) in Bhimavaram, achieving a commendable score of 413 out of 500. During my schooling, I enthusiastically engaged in a variety of extracurricular activities such as sports, quizzes, and debates. These experiences not only enriched my academic life but also taught me valuable lessons in teamwork, leadership, and effective communication.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+                <div class="container" style="--dly:1s">
+                    <div class="text-content">
+                        <h2>Intermediate</h2>
+                        <p>I completed my intermediate education at Tirumala Junior College with an outstanding score of 908 out of 1000. During my time there, I discovered a deep interest in solving mathematical problems, which not only fueled my curiosity but also led to exceptional results in mathematics. This passion for problem-solving played a pivotal role in my decision to pursue engineering. Additionally, my achievement of an 89 percentile in JEE Mains 2022 further reinforced my conviction in choosing engineering as my career path.</p>
+                    </div>
+                </div>
+                <div class="container" style="--dly:2s">
+                    <div class="text-content">
+                        <h2>Engineering</h2>
+                        <p>I'm currently in my third year of Computer Science Engineering at Koneru Lakshmai University in Vijayawada, maintaining a commendable CGPA of 9.22. Throughout my journey here, I've delved deep into various programming languages such as C, Java, and Python, with a foundational understanding of certain full-stack courses. Beyond academics, I've been actively involved in fostering a supportive learning environment within our department. Serving as a peer mentor and a LEAD member in the official body has not only honed my leadership skills but has also provided me with invaluable opportunities for personal and professional growth.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
 
-    <footer class="footer">
-        <a href="#" class="top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
-        <p>Developed with ❤️ by Neeraj | &copy; 2025</p>
-    </footer>
+    <div class="footer">
+        <a href="#" class="top" style='font-size: 40px; padding-right:4000px'><i class='bx bx-rocket'></i></a>
+        <p>Developed by Neeraj | &copy; 2025</p>
+    </div>
 
     <script>
         particlesJS("particles-js", {
@@ -90,36 +71,23 @@
                     "value": 60,
                     "density": { "enable": true, "value_area": 800 }
                 },
-                "color": { "value": "#0ef" },
+                "color": { "value": "#ffffff" },
                 "shape": { "type": "circle" },
                 "opacity": { "value": 0.5 },
                 "size": { "value": 3 },
                 "line_linked": {
                     "enable": true,
                     "distance": 150,
-                    "color": "#0ef",
+                    "color": "#ffffff",
                     "opacity": 0.4,
                     "width": 1
                 },
-                "move": { 
-                    "enable": true, 
-                    "speed": 2,
-                    "direction": "none",
-                    "random": true,
-                    "straight": false,
-                    "out_mode": "out"
-                }
+                "move": { "enable": true, "speed": 2 }
             },
             "interactivity": {
                 "events": {
-                    "onhover": { 
-                        "enable": true, 
-                        "mode": "grab" 
-                    },
-                    "onclick": { 
-                        "enable": true, 
-                        "mode": "push" 
-                    }
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" }
                 },
                 "modes": {
                     "grab": {
@@ -131,16 +99,15 @@
             },
             "retina_detect": true
         });
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navbarRight = document.querySelector('.navbar-right');
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
+    hamburger.addEventListener('click', () => {
+        navbarRight.classList.toggle('active');
+    });
+});
+        </script>
+        
 </body>
 </html>
