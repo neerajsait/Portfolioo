@@ -4,98 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certifications - My Portfolio</title>
-    <link rel="stylesheet" href="css/certifications.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/certifications.css">
     <link rel="stylesheet" href="css/footer.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    
-    <div class="navbar">
+    <!-- Particles.js Background -->
+    <div id="particles-js"></div>
+
+    <header class="navbar">
         <div class="navbar-left">
             <h3 class="nav-h">Tiruveedhi Neeraj Venkata Sai</h3>
         </div>
         <div class="navbar-right">
-            <a class="a-ele" href="index.html" style="--i:1">Home</a>
-            <a class="a-ele" href="about.html" style="--i:6">About</a>
-            <a class="a-ele" href="skills.html" style="--i:3">Skills</a>
-            <a class="a-ele" href="projects.html" style="--i:4">Projects</a>    
-            <a class="a-ele" href="certifications.html" style="--i:4">Certifications</a> 
-            <a class="a-ele" href="contact.html" style="--i:5">Contact</a>
-            <button class="hamburger"><i class="fas fa-bars"></i></button>
+            <a class="a-ele" href="index.html">Home</a>
+            <a class="a-ele" href="about.html">About</a>
+            <a class="a-ele" href="skills.html">Skills</a>
+            <a class="a-ele" href="projects.html">Projects</a>    
+            <a class="a-ele" href="certifications.html">Certifications</a> 
+            <a class="a-ele" href="contact.html">Contact</a>
         </div>
-    </div>
-    <!-- Particles.js Background -->
-    <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+    </header>
 
-    <section id="certifications" class="certifications-section">
-        <h2 class="subtitle">My <span>Certifications</span></h2>
-        <div class="certifications-container">
+    <main class="certifications-section">
+        <div class="section-header">
+            <h2 class="section-title">My <span>Certifications</span></h2>
+            <p class="section-subtitle">Professional credentials validating my technical expertise</p>
+        </div>
+
+        <div class="certifications-grid">
             <!-- Postman API -->
-            <div class="certification" onclick="window.open('https://badgr.com/public/assertions/n6jEBEhGRbqsh5MiCcuEjQ')" style="cursor: pointer;">
-                <img src="media/postman.jpg" alt="Postman API Certification">
-                <h3>Postman API Fundamentals</h3>
-                <p>Issued by Postman</p>
+            <div class="certification-card" style="--card-accent: #FF6C37;" onclick="window.open('https://badgr.com/public/assertions/n6jEBEhGRbqsh5MiCcuEjQ')">
+                <div class="certification-logo">
+                    <img src="media/postman.jpg" alt="Postman">
+                </div>
+                <div class="certification-content">
+                    <h3>Postman API Fundamentals</h3>
+                    <p class="issuer">Postman</p>
+                    <div class="certification-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Verified Credential</span>
+                    </div>
+                </div>
+                <div class="certification-hover">
+                    <span>View Credential</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
             </div>
 
             <!-- Salesforce AI Associate -->
-            <div class="certification" onclick="window.open('https://trailhead.salesforce.com/en/credentials/verification/')" style="cursor: pointer;">
-                <img src="media/salesforce.jpg" alt="Salesforce AI Associate">
-                <h3>Salesforce AI Associate</h3>
-                <p>Issued by Salesforce</p>
+            <div class="certification-card" style="--card-accent: #00A1E0;" onclick="window.open('https://trailhead.salesforce.com/en/credentials/verification/')">
+                <div class="certification-logo">
+                    <img src="media/salesforce.jpg" alt="Salesforce">
+                </div>
+                <div class="certification-content">
+                    <h3>Salesforce AI Associate</h3>
+                    <p class="issuer">Salesforce</p>
+                    <div class="certification-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Verified Credential</span>
+                    </div>
+                </div>
+                <div class="certification-hover">
+                    <span>View Credential</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
             </div>
 
             <!-- Microsoft AI-900 -->
-            <div class="certification"  onclick="window.open('https://learn.microsoft.com/en-in/users/tiruveedhineerajvenkatasai-1148/credentials/7f6ad6c42a923f73?ref=https%3A%2F%2Fwww.linkedin.com%2F')" style="cursor: pointer;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft AI-900">
-                <h3>AI-900: Azure AI Fundamentals</h3>
-                <p>Issued by Microsoft</p>
+            <div class="certification-card" style="--card-accent: #0078D4;" onclick="window.open('https://learn.microsoft.com/en-in/users/tiruveedhineerajvenkatasai-1148/credentials/7f6ad6c42a923f73')">
+                <div class="certification-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+                </div>
+                <div class="certification-content">
+                    <h3>Azure AI Fundamentals</h3>
+                    <p class="issuer">Microsoft</p>
+                    <div class="certification-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Verified Credential</span>
+                    </div>
+                </div>
+                <div class="certification-hover">
+                    <span>View Credential</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
             </div>
 
             <!-- AWS Certified Cloud Practitioner -->
-            <div class="certification" onclick="https://www.credly.com/badges/4b61af02-e6d6-409b-a4e3-fc3f95f401c4/public_url" style="cursor: pointer;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Certified Cloud Practitioner">
-                <h3>AWS Certified Cloud Practitioner</h3>
-                <p>Issued by Amazon AWS</p>
+            <div class="certification-card" style="--card-accent: #FF9900;" onclick="window.open('https://www.credly.com/badges/4b61af02-e6d6-409b-a4e3-fc3f95f401c4/public_url')">
+                <div class="certification-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
+                </div>
+                <div class="certification-content">
+                    <h3>AWS Cloud Practitioner</h3>
+                    <p class="issuer">Amazon AWS</p>
+                    <div class="certification-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Verified Credential</span>
+                    </div>
+                </div>
+                <div class="certification-hover">
+                    <span>View Credential</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
             </div>
 
             <!-- NPTEL Java Programming -->
-            <div class="certification">
-                <img src="media/nptel.jpg" alt="NPTEL Java Certification">
-                <h3>NPTEL Java Programming</h3>
-                <p>Issued by NPTEL (IIT)</p>
+            <div class="certification-card" style="--card-accent: #E74C3C;">
+                <div class="certification-logo">
+                    <img src="media/nptel.jpg" alt="NPTEL">
+                </div>
+                <div class="certification-content">
+                    <h3>Java Programming</h3>
+                    <p class="issuer">NPTEL (IIT)</p>
+                    <div class="certification-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Completed</span>
+                    </div>
+                </div>
+                <div class="certification-hover">
+                    <span>Certificate</span>
+                    <i class="fas fa-certificate"></i>
+                </div>
             </div>
 
             <!-- Linguaskills (B1 in English) -->
-            <div class="certification">
-                <img src="media/Cambridge_Logo.jpeg" alt="Linguaskills English Certification">
-                <h3>Linguaskills (B1 in English)</h3>
-                <p>Issued by Cambridge English</p>
+            <div class="certification-card" style="--card-accent: #D0021B;">
+                <div class="certification-logo">
+                    <img src="media/Cambridge_Logo.jpeg" alt="Cambridge">
+                </div>
+                <div class="certification-content">
+                    <h3>Linguaskills (B1)</h3>
+                    <p class="issuer">Cambridge English</p>
+                    <div class="certification-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Completed</span>
+                    </div>
+                </div>
+                <div class="certification-hover">
+                    <span>Certificate</span>
+                    <i class="fas fa-certificate"></i>
+                </div>
             </div>
 
             <!-- Juniper Junos Certification -->
-            <div class="certification">
-                <img src="media/juniper.png" alt="Juniper Junos Certification">
-                <h3>Juniper Networks Certified Associate - Junos (JNCIA-Junos)</h3>
-                <p>Issued by Juniper Networks</p>
+            <div class="certification-card" style="--card-accent: #84BD00;">
+                <div class="certification-logo">
+                    <img src="media/juniper.png" alt="Juniper">
+                </div>
+                <div class="certification-content">
+                    <h3>JNCIA-Junos</h3>
+                    <p class="issuer">Juniper Networks</p>
+                    <div class="certification-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Completed</span>
+                    </div>
+                </div>
+                <div class="certification-hover">
+                    <span>Certificate</span>
+                    <i class="fas fa-certificate"></i>
+                </div>
             </div>
 
             <!-- Cisco Data Analyst Certification -->
-            <div class="certification" onclick="window.open('https:https://www.credly.com/badges/5bd6f98f-f1cf-4e3f-8c59-c330e0fb5c19/public_url')" style="cursor: pointer;"> 
-                <img src="media/cisco.png" alt="Cisco Data Analyst Certification">
-                <h3>Cisco Certified Data Analyst</h3>
-                <p>Issued by Cisco</p>
+            <div class="certification-card" style="--card-accent: #1BA0D7;" onclick="window.open('https://www.credly.com/badges/5bd6f98f-f1cf-4e3f-8c59-c330e0fb5c19/public_url')">
+                <div class="certification-logo">
+                    <img src="media/cisco.png" alt="Cisco">
+                </div>
+                <div class="certification-content">
+                    <h3>Data Analyst</h3>
+                    <p class="issuer">Cisco</p>
+                    <div class="certification-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Verified Credential</span>
+                    </div>
+                </div>
+                <div class="certification-hover">
+                    <span>View Credential</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <div class="footer">
-        <a href="#" class="top" style='font-size: 40px; padding-right:4000px'><i class='bx bx-rocket'></i></a>
-        <p>Developed by Neeraj | &copy; 2025</p>
-    </div>
+    <footer class="footer">
+        <a href="#" class="top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+        <p>Developed with ❤️ by Neeraj | &copy; 2025</p>
+    </footer>
+
     <script>
         particlesJS("particles-js", {
             "particles": {
@@ -103,23 +203,36 @@
                     "value": 60,
                     "density": { "enable": true, "value_area": 800 }
                 },
-                "color": { "value": "#ffffff" },
+                "color": { "value": "#0ef" },
                 "shape": { "type": "circle" },
                 "opacity": { "value": 0.5 },
                 "size": { "value": 3 },
                 "line_linked": {
                     "enable": true,
                     "distance": 150,
-                    "color": "#ffffff",
+                    "color": "#0ef",
                     "opacity": 0.4,
                     "width": 1
                 },
-                "move": { "enable": true, "speed": 2 }
+                "move": { 
+                    "enable": true, 
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out"
+                }
             },
             "interactivity": {
                 "events": {
-                    "onhover": { "enable": true, "mode": "grab" },
-                    "onclick": { "enable": true, "mode": "push" }
+                    "onhover": { 
+                        "enable": true, 
+                        "mode": "grab" 
+                    },
+                    "onclick": { 
+                        "enable": true, 
+                        "mode": "push" 
+                    }
                 },
                 "modes": {
                     "grab": {
@@ -132,15 +245,7 @@
             "retina_detect": true
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navbarRight = document.querySelector('.navbar-right');
-
-    hamburger.addEventListener('click', () => {
-        navbarRight.classList.toggle('active');
-    });
-});
-        </script>
         
+    </script>
 </body>
 </html>
