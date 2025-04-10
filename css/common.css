@@ -1,12 +1,12 @@
 /* common.css - Global Styles */
 :root {
-  --primary-color: #0ef;
-  --secondary-color: #1f242d;
-  --bg-color: #081b29;
-  --text-color: #fff;
-  --accent-color: #ff4d4d;
-  --card-bg: rgba(31, 36, 45, 0.8);
-  --transition: all 0.5s ease;
+  --primary-color: #aee064;    /* Main button color and accent color */
+  --secondary-color: #111;     /* Footer background */
+  --bg-color: #000;           /* Body background */
+  --text-color: #fff;         /* Body text color */
+  --accent-color: #00ff99;    /* Footer hover color */
+  --card-bg: rgba(17, 17, 17, 0.8);  /* Modified from footer #111 with opacity */
+  --transition: all 0.5s ease; /* Kept original transition */
 }
 
 * {
