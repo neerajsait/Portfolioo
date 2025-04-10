@@ -31,11 +31,6 @@
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    justify-content: center;
-    align-items: stretch;
     position: relative;
     z-index: 1;
 }
@@ -78,12 +73,14 @@
     margin-bottom: 60px;
 }
 
-/* Skills Grid */
+/* Skills Grid - Side by Side Categories */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns for Frontend, Backend, Database, Tools */
     gap: 30px;
     margin-top: 40px;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    justify-content: start;
 }
 
 /* Skill Card/Category */
@@ -99,6 +96,7 @@
     overflow: hidden;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    min-width: 280px; /* Ensures cards don’t shrink too much */
 }
 
 .skill-card::before {
@@ -161,24 +159,21 @@
     transform: rotate(360deg);
 }
 
-/* Skills List - Side by Side */
+/* Skills List */
 .skills-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: row; /* Changed to row for side-by-side layout */
+    flex-wrap: wrap;
     gap: 12px;
     justify-content: center;
-    flex-wrap: nowrap; /* Prevents wrapping to keep items side by side */
-    overflow-x: auto; /* Adds horizontal scrolling if needed */
 }
 
 .skills-list li {
-    margin-bottom: 0; /* Removed margin since we're not stacking vertically */
-    display: inline-flex; /* Changed to inline-flex for horizontal alignment */
-    align-items: center;
-    flex-shrink: 0; /* Prevents shrinking to maintain size */
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .skills-list span {
@@ -197,7 +192,6 @@
     border: 1px solid rgba(174, 224, 100, 0.1);
     position: relative;
     overflow: hidden;
-    white-space: nowrap; /* Prevents text wrapping within each skill */
 }
 
 .skills-list span:hover {
@@ -236,6 +230,10 @@
     .skills-section {
         padding: 80px 4% 60px;
     }
+
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr); /* Maintain 4 columns */
+    }
 }
 
 @media (max-width: 768px) {
@@ -253,9 +251,8 @@
         width: 60px;
     }
 
-    .skills-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr); /* Still 4 columns */
     }
 
     .skill-card {
@@ -265,10 +262,6 @@
 
     .skill-header h3 {
         font-size: 1.7rem;
-    }
-
-    .skills-list {
-        flex-wrap: wrap; /* Allow wrapping on smaller screens */
     }
 }
 
