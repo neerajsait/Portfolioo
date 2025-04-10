@@ -161,21 +161,24 @@
     transform: rotate(360deg);
 }
 
-/* Skills List */
+/* Skills List - Side by Side */
 .skills-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row; /* Changed to row for side-by-side layout */
     gap: 12px;
     justify-content: center;
+    flex-wrap: nowrap; /* Prevents wrapping to keep items side by side */
+    overflow-x: auto; /* Adds horizontal scrolling if needed */
 }
 
 .skills-list li {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 0; /* Removed margin since we're not stacking vertically */
+    display: inline-flex; /* Changed to inline-flex for horizontal alignment */
+    align-items: center;
+    flex-shrink: 0; /* Prevents shrinking to maintain size */
 }
 
 .skills-list span {
@@ -194,6 +197,7 @@
     border: 1px solid rgba(174, 224, 100, 0.1);
     position: relative;
     overflow: hidden;
+    white-space: nowrap; /* Prevents text wrapping within each skill */
 }
 
 .skills-list span:hover {
@@ -261,6 +265,10 @@
 
     .skill-header h3 {
         font-size: 1.7rem;
+    }
+
+    .skills-list {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
     }
 }
 
