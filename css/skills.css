@@ -1,249 +1,161 @@
-body {
-    margin: 0; /* Remove default margin for full-page coverage */
-    padding: 0;
-    background-color: #000; /* Fallback if particles fail */
-    position: relative; /* Allows z-index stacking */
+/* skills.css - Skills Page Styles */
+
+/* Skills Section */
+.skills-section {
+    padding: 100px 9% 80px;
+    position: relative;
 }
 
-.skills-section {
-    width: 90%;
-    max-width: 1100px; /* Slightly wider for a more spacious look */
-    margin: 60px auto;
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent for readability over particles */
-    padding: 50px 25px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(174, 224, 100, 0.2); /* Subtle glow with #aee064 */
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, var(--primary-color), #ff4d4d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-title span {
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 60px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Skill Card */
+.skill-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    text-align: left;
     position: relative;
-    z-index: 1; /* Above particles */
     overflow: hidden;
 }
 
-/* Add a subtle overlay effect for depth */
-.skills-section::before {
+.skill-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(174, 224, 100, 0.1) 0%, transparent 70%);
-    z-index: 0;
+    height: 5px;
+    background: var(--card-color);
 }
 
-.skills-section h2 {
-    font-size: 2.8rem; /* Larger for a more striking title */
-    color: #f0ecec; /* Lighter color for contrast on black */
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    position: relative;
-    z-index: 1;
-    font-weight: 700;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-}
-
-.skills-section h2 span {
-    color: #aee064; /* Matches your theme */
-}
-
-.skills-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, #aee064, transparent);
-    border-radius: 2px;
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Wider cards for elegance */
-    gap: 30px;
-    justify-content: center;
-    align-items: stretch;
-    position: relative;
-    z-index: 1;
-}
-
-.skill-category {
-    background: linear-gradient(145deg, #1a1a1a, #131313); /* Subtle gradient for depth */
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    text-align: center;
-    min-height: 220px; /* Taller for a more balanced look */
-    border: 1px solid rgba(174, 224, 100, 0.2); /* Subtle border with #aee064 */
-    position: relative;
-    overflow: hidden;
-}
-
-/* Add a glowing effect on hover */
-.skill-category:hover {
+.skill-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(174, 224, 100, 0.3);
-    border-color: #aee064;
+    box-shadow: 0 15px 30px rgba(0, 238, 255, 0.2);
+    border-color: var(--primary-color);
 }
 
-/* Add a subtle shine effect on hover */
-.skill-category::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(174, 224, 100, 0.2), transparent);
-    transition: 0.5s;
-}
-
-.skill-category:hover::before {
-    left: 100%;
-}
-
-.skill-category h3 {
-    font-size: 1.9rem; /* Larger for better hierarchy */
-    color: #aee064;
-    margin-bottom: 20px;
+.skill-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 25px;
+    color: var(--card-color);
 }
 
-.skill-category h3 i {
-    color: #f0ecec; /* Lighter icon color for contrast */
-    font-size: 1.6rem;
-    transition: transform 0.3s ease;
+.skill-header i {
+    font-size: 28px;
+    margin-right: 15px;
 }
 
-.skill-category:hover h3 i {
-    transform: rotate(360deg); /* Fun icon animation on hover */
+.skill-header h3 {
+    font-size: 22px;
+    margin: 0;
 }
 
+/* Skills List */
 .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    margin-bottom: 15px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .skills-list span {
-    background: #1a1a1a; /* Slightly lighter than #131313 for contrast */
-    padding: 12px 20px;
-    border-radius: 10px; /* More rounded for a softer look */
-    font-size: 1rem;
-    color: #f0ecec;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 8px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    font-weight: 500;
-    text-transform: uppercase;
-    border: 1px solid rgba(174, 224, 100, 0.1);
-    position: relative;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.skills-list i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--card-color);
+}
+
+/* Skill Bar */
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
     overflow: hidden;
 }
 
-/* Add a subtle glow effect on hover */
-.skills-list span:hover {
-    background: #aee064;
-    color: #131313;
-    transform: scale(1.1);
-    font-weight: bold;
-    box-shadow: 0 5px 15px rgba(174, 224, 100, 0.4);
-    border-color: #aee064;
-}
-
-/* Add a shine effect on skill items */
-.skills-list span::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
+.skill-level {
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: 0.4s;
+    background: var(--card-color);
+    border-radius: 4px;
+    transition: width 1.5s ease;
 }
 
-.skills-list span:hover::before {
-    left: 100%;
+/* Responsive Design */
+@media (max-width: 991px) {
+    .skills-section {
+        padding: 80px 4% 60px;
+    }
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .skills-section {
-        padding: 40px 20px;
-        margin: 40px auto;
+    .section-title {
+        font-size: 36px;
     }
-
-    .skills-section h2 {
-        font-size: 2.2rem;
-        letter-spacing: 2px;
-    }
-
-    .skills-section h2::after {
-        width: 60px;
-    }
-
-    .skills-container {
-        grid-template-columns: 1fr; /* Stack on mobile */
-        gap: 20px;
-    }
-
-    .skill-category {
-        padding: 25px;
-        min-height: 200px;
-    }
-
-    .skill-category h3 {
-        font-size: 1.7rem;
-    }
-
-    .skills-list span {
-        font-size: 0.95rem;
-        padding: 10px 18px;
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 480px) {
-    .skills-section {
-        padding: 30px 15px;
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 32px;
     }
-
-    .skills-section h2 {
-        font-size: 1.8rem;
-        letter-spacing: 1.5px;
-    }
-
-    .skills-section h2::after {
-        width: 50px;
-    }
-
-    .skill-category {
+    
+    .skill-card {
         padding: 20px;
-        min-height: 180px;
     }
-
-    .skill-category h3 {
-        font-size: 1.5rem;
-    }
-
-    .skill-category h3 i {
-        font-size: 1.4rem;
-    }
-
-    .skills-list span {
-        font-size: 0.9rem;
-        padding: 8px 16px;
+    
+    .skill-header h3 {
+        font-size: 20px;
     }
 }

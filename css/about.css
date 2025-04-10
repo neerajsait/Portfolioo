@@ -1,265 +1,220 @@
-body {
-    margin: 0; /* Remove default margin for full-page coverage */
-    padding: 0;
-    background-color: #000; /* Fallback if particles fail */
-    position: relative; /* Allows z-index stacking */
+/* about.css - About Page Styles */
+
+/* About Section */
+.about-container {
+  padding: 80px 9% 60px; /* Reduced top padding */
+  position: relative;
 }
 
-.education {
-    padding: 90px 0; /* Matches .Projects padding */
-    text-align: center;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent for readability over particles */
-    position: relative;
-    z-index: 1; /* Above particles */
-    overflow: hidden;
-    margin: 0; /* Removed margin to align with .Projects */
+.about-section {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.education::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(174, 224, 100, 0.1) 0%, transparent 70%); /* Matches .Projects */
-    z-index: 0;
+.about-header {
+  text-align: center;
+  margin-bottom: 30px; /* Reduced margin */
+  animation: fadeIn 1s ease 0.3s both;
 }
 
-.subtitle {
-    font-size: 2.8rem; /* Matches .Projects h2 */
-    color: #f0ecec; /* Matches .Projects h2 */
-    margin-bottom: 50px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    position: relative;
-    z-index: 1;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Matches .Projects h2 */
+.about-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, var(--primary-color), #ff4d4d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.subtitle span {
-    color: #aee064; /* Retained from original */
+.about-title span {
+  color: var(--primary-color);
 }
 
-.subtitle::after {
-    content: '';
-    position: absolute;
-    bottom: -15px; /* Matches .Projects h2::after */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px; /* Matches .Projects h2::after */
-    height: 4px;
-    background: linear-gradient(90deg, transparent, #aee064, transparent); /* Matches .Projects h2::after */
-    border-radius: 2px;
+.about-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.time-line {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-    position: relative;
-    padding: 40px 0;
-    z-index: 1; /* Ensures timeline is above background effect */
+/* Timeline Section */
+/* Timeline Section */
+.education-timeline {
+  position: relative;
+  padding: 20px 0; /* Reduced padding */
 }
 
-.time-line::after {
-    content: '';
-    position: absolute;
-    left: 96.5%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 6px;
-    background: linear-gradient(to bottom, #aee064, #6b9e2f); /* Retained from original */
-    top: 0;
-    bottom: 0;
-    border-radius: 3px;
-    animation: LineAnimated 4s ease-out forwards;
+/* Rest of your CSS remains the same */
+.timeline-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px; /* Reduced margin */
+  position: relative;
 }
 
-@keyframes LineAnimated {
-    0% { height: 0; }
-    100% { height: 100%; }
+.timeline-title span {
+  color: var(--primary-color);
 }
 
-.container {
-    width: 50%;
-    position: relative;
-    padding: 20px 10px;
-    margin-bottom: 80px;
-    opacity: 0;
-    animation: Animate-Container 1s ease-out forwards;
-    animation-delay: var(--dly);
+.timeline-title::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
 }
 
-@keyframes Animate-Container {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.container:nth-child(odd) {
-    left: 0;
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: var(--primary-color);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
 }
 
-.container:nth-child(even) {
-    left: 94.6%;
+.timeline-item {
+  padding: 20px 0;
+  opacity: 0;
+  animation: fadeInUp 1s ease var(--dly) forwards;
 }
 
-.container:nth-child(odd)::before,
-.container:nth-child(even)::before {
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: #aee064;
-    top: 30px;
-    border-radius: 50%;
-    z-index: 10;
-    box-shadow: 0 0 10px rgba(174, 224, 100, 0.8); /* Retained glow effect */
-    transition: transform 0.3s ease;
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
 }
 
-.container:hover::before {
-    transform: scale(1.2); /* Retained hover effect */
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
 }
 
-.container:nth-child(odd)::before {
-    right: -25px;
+.timeline-item:nth-child(even) .timeline-content {
+  margin-right: auto;
 }
 
-.container:nth-child(even)::before {
-    left: -50px;
+.timeline-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0 0 20px var(--primary-color);
 }
 
-.text-content {
-    background: #1a1a1a; /* Matches .card background */
-    width: 100%; /* Ensures full width within container */
-    border-radius: 10px; /* Matches .card */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Matches .card */
-    padding: 30px; /* Matches .card */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out; /* Matches .card */
-    text-align: left; /* Matches .card */
-    border: 2px solid transparent; /* Matches .card */
-    position: relative;
-    overflow: hidden; /* Matches .card */
+.timeline-icon i {
+  font-size: 24px;
+  color: var(--secondary-color);
 }
 
-.text-content:hover {
-    transform: translateY(-5px); /* Matches .card hover */
-    box-shadow: 0 6px 15px rgba(174, 224, 100, 0.25); /* Matches .card hover */
-    border: 2px solid #aee064; /* Matches .card hover */
+.timeline-period {
+  font-size: 14px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
 }
 
-.text-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 30%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(174, 224, 100, 0.15), transparent); /* Matches .card::before */
-    transition: left 0.4s ease-in-out;
+.timeline-heading {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--text-color);
 }
 
-.text-content:hover::before {
-    left: 100%; /* Matches .card:hover::before */
+.timeline-description {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
 }
 
-.text-content h2 {
-    font-size: 26px; /* Matches .card-title */
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #f0ecec; /* Matches .card-title */
-    text-transform: uppercase;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Matches .card-title */
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 238, 255, 0.3);
+  border-color: var(--primary-color);
 }
 
-.text-content p {
-    font-size: 16px; /* Matches .card-text */
-    color: #ddd; /* Matches .card-text */
-    line-height: 1.6;
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
+@media (max-width: 991px) {
+  .about-container {
+      padding: 100px 4% 80px;
+  }
+}
+
 @media (max-width: 768px) {
-    .education {
-        padding: 70px 0; /* Matches .Projects */
-    }
-
-    .subtitle {
-        font-size: 2.2rem; /* Matches .Projects h2 */
-        letter-spacing: 2px;
-    }
-
-    .subtitle::after {
-        width: 60px; /* Matches .Projects h2::after */
-    }
-
-    .time-line {
-        width: 90%;
-        padding: 20px 0;
-    }
-
-    .time-line::after {
-        left: 25px;
-        transform: none;
-    }
-
-    .container {
-        width: 90%; /* Matches .card width */
-        left: 0;
-        margin-bottom: 60px;
-    }
-
-    .container:nth-child(odd),
-    .container:nth-child(even) {
-        left: 0;
-    }
-
-    .container:nth-child(odd)::before,
-    .container:nth-child(even)::before {
-        left: 15px;
-        right: auto;
-    }
-
-    .text-content {
-        padding: 25px; /* Matches .card */
-        margin-left: 50px;
-    }
-
-    .text-content h2 {
-        font-size: 24px; /* Matches .card-title */
-    }
-
-    .text-content p {
-        font-size: 14px; /* Matches .card-text */
-    }
+  .timeline::before {
+      left: 30px;
+  }
+  
+  .timeline-content {
+      width: calc(100% - 80px);
+      margin-left: 80px !important;
+  }
+  
+  .timeline-icon {
+      left: 30px;
+      transform: translateX(0);
+  }
+  
+  .about-title {
+      font-size: 36px;
+  }
+  
+  .timeline-title {
+      font-size: 28px;
+  }
 }
 
-@media (max-width: 480px) {
-    .education {
-        padding: 60px 0; /* Matches .Projects */
-    }
-
-    .subtitle {
-        font-size: 1.8rem; /* Matches .Projects h2 */
-        letter-spacing: 1.5px;
-    }
-
-    .subtitle::after {
-        width: 50px; /* Matches .Projects h2::after */
-    }
-
-    .text-content {
-        padding: 20px; /* Matches .card */
-        margin-left: 45px;
-    }
-
-    .text-content h2 {
-        font-size: 22px; /* Matches .card-title */
-    }
-
-    .text-content p {
-        font-size: 13px; /* Matches .card-text */
-    }
+@media (max-width: 576px) {
+  .about-title {
+      font-size: 32px;
+  }
+  
+  .timeline-content {
+      padding: 20px;
+  }
+  
+  .timeline-heading {
+      font-size: 20px;
+  }
+  
+  .timeline-description {
+      font-size: 14px;
+  }
 }

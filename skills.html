@@ -4,90 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills - My Portfolio</title>
-    <link rel="stylesheet" href="css\skills.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <div class="navbar">
+    <!-- Particles.js Background -->
+    <div id="particles-js"></div>
+
+    <header class="navbar">
         <div class="navbar-left">
             <h3 class="nav-h">Tiruveedhi Neeraj Venkata Sai</h3>
         </div>
         <div class="navbar-right">
-            <a class="a-ele" href="index.html" style="--i:1">Home</a>
-            <a class="a-ele" href="about.html" style="--i:6">About</a>
-            <a class="a-ele" href="skills.html" style="--i:3">Skills</a>
-            <a class="a-ele" href="projects.html" style="--i:4">Projects</a>    
-            <a class="a-ele" href="certifications.html" style="--i:4">Certifications</a> 
-            <a class="a-ele" href="contact.html" style="--i:5">Contact</a>
+            <a class="a-ele" href="index.html">Home</a>
+            <a class="a-ele" href="about.html">About</a>
+            <a class="a-ele" href="skills.html">Skills</a>
+            <a class="a-ele" href="projects.html">Projects</a>    
+            <a class="a-ele" href="certifications.html">Certifications</a> 
+            <a class="a-ele" href="contact.html">Contact</a>
         </div>
-    </div>
+    </header>
 
-     <!-- Particles.js Background -->
-     <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
-    <section id="skills" class="skills-section">
-
-        <h2 class="subtitle">My <span>Skills</span></h2>
+    <main class="skills-section">
         <div class="skills-container">
-            <!-- Frontend -->
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Frontend</h3>
-                <div class="skills-list">
-                    <span><i class="fab fa-html5"></i> HTML</span>
-                    <span><i class="fab fa-css3-alt"></i> CSS</span>
-                    <span><i class="fab fa-js"></i> JavaScript</span>
-                    <span><i class="fab fa-react"></i> React.js</span>
-                    <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <p class="section-subtitle">Technologies I've worked with and mastered</p>
+            
+            <div class="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-card" style="--card-color: #ff6b6b;">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Frontend</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fab fa-bootstrap"></i>
+                            <span>Bootstrap</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 88%"></div></div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
 
-            <!-- Backend -->
-            <div class="skill-category">
-                <h3><i class="fas fa-server"></i> Backend</h3>
-                <div class="skills-list">
-                    <span><i class="fab fa-python"></i> Python</span>
-                    <span><i class="fab fa-java"></i> Java</span>
-                    <span><i class="fas fa-leaf"></i> Spring Boot</span>
-                    <span><i class="fas fa-flask"></i> Flask</span>
+                <!-- Backend -->
+                <div class="skill-card" style="--card-color: #48dbfb;">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 92%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 88%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-leaf"></i>
+                            <span>Spring Boot</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-flask"></i>
+                            <span>Flask</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 82%"></div></div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
 
-            <!-- Database -->
-            <div class="skill-category">
-                <h3><i class="fas fa-database"></i> Database & IDEs</h3>
-                <div class="skills-list">
-                    <span><i class="fas fa-database"></i> MySQL</span>
-                    <span><i class="fas fa-code"></i> VS Code</span>
-                    <span><i class="fas fa-code"></i> Eclipse</span>
-                    <span><i class="fas fa-code"></i> PyCharm</span>
-                    <span><i class="fas fa-database"></i> MongoDB</span>
+                <!-- Database -->
+                <div class="skill-card" style="--card-color: #1dd1a1;">
+                    <div class="skill-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Database & IDEs</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-code"></i>
+                            <span>Eclipse</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-code"></i>
+                            <span>PyCharm</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 78%"></div></div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
 
-            <!-- Tools -->
-            <div class="skill-category">
-                <h3><i class="fas fa-tools"></i> Tools</h3>
-                <div class="skills-list">
-                    <span><i class="fab fa-github"></i> GitHub</span>
-                    <span><i class="fab fa-figma"></i> Figma</span>
-                    <span><i class="fas fa-flask"></i> Postman</span>
-                    <span><i class="fas fa-chart-pie"></i> Tableau</span>
-                    <span><i class="fas fa-database"></i> Pandas & NumPy</span>
-                    <span><i class="fas fa-chart-bar"></i> Matplotlib & Seaborn</span>
+                <!-- Tools -->
+                <div class="skill-card" style="--card-color: #f368e0;">
+                    <div class="skill-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 92%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-flask"></i>
+                            <span>Postman</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Tableau</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 70%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-database"></i>
+                            <span>Pandas & NumPy</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 88%"></div></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Matplotlib & Seaborn</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 82%"></div></div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
+    <footer class="footer">
+        <a href="#" class="top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+        <p>Developed with ❤️ by Neeraj | &copy; 2025</p>
+    </footer>
 
-    <div class="footer">
-        <a href="#" class="top" style='font-size: 40px; padding-right:4000px'><i class='bx bx-rocket'></i></a>
-        <p>Developed by Neeraj | &copy; 2025</p>
-    </div>
     <script>
         particlesJS("particles-js", {
             "particles": {
@@ -95,23 +191,36 @@
                     "value": 60,
                     "density": { "enable": true, "value_area": 800 }
                 },
-                "color": { "value": "#ffffff" },
+                "color": { "value": "#0ef" },
                 "shape": { "type": "circle" },
                 "opacity": { "value": 0.5 },
                 "size": { "value": 3 },
                 "line_linked": {
                     "enable": true,
                     "distance": 150,
-                    "color": "#ffffff",
+                    "color": "#0ef",
                     "opacity": 0.4,
                     "width": 1
                 },
-                "move": { "enable": true, "speed": 2 }
+                "move": { 
+                    "enable": true, 
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out"
+                }
             },
             "interactivity": {
                 "events": {
-                    "onhover": { "enable": true, "mode": "grab" },
-                    "onclick": { "enable": true, "mode": "push" }
+                    "onhover": { 
+                        "enable": true, 
+                        "mode": "grab" 
+                    },
+                    "onclick": { 
+                        "enable": true, 
+                        "mode": "push" 
+                    }
                 },
                 "modes": {
                     "grab": {
@@ -123,7 +232,6 @@
             },
             "retina_detect": true
         });
-        </script>
-        
+    </script>
 </body>
 </html>
